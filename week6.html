@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Week 6</title>
+<style type="text/css">
+<!--
+body {
+	font: 15px "Times New Roman", Times, serif, sans-serif;
+	line-height: 30px;
+	background-color: #ccc;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+
+h3 {
+	font-family: Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+h2 {
+	font-family: Helvetica, sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #903;
+	text-decoration: underline;
+	font-weight: bold;
+	
+}
+a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	width: 750px;
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header p {
+	font: 15px "Times New Roman", Times, serif;
+	text-align: right;
+	padding: 10px 5px;
+	background-color: #fff;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+
+	padding: 10px 0;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #fff;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="header">
+  	<p>Kim Vroman<br>
+    	TC 362<br>
+        2/24/15</p>
+  </div>
+  <div class="content">
+    <h2>Technology Research Paper: Dropbox</h3>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;Dropbox, founded in 2007 by Drew Houston and Arash Ferdowsi, has grown to over 300 million users across the world in only eight years. It is the freemium service that allows people to quickly and easily upload and share photos, documents, and videos (Dropbox, 2015). Even with this exponential growth, Dropbox has managed to still operate with a team of less than 100, spread out between three different cities. There are tens of thousands of servers responsible for storing and serving the metadata for every file in Dropbox. Additionally, one billion files are saved every day to Dropbox; so in order for the service to be reliable, their servers need to be fast and consistent (Cook, 2014). Dropbox has their technology stack well figured out, and startup companies everywhere should take note.</p>
+    <h3>Amazon Web Services</h3>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;Dropbox is currently using Amazon’s collection of compatible “pay for what you use”, cloud infrastructure web services, known as AWS. AWS is convenient because it allows the user to only pay for the data or storage that they actually use. AWS offers an assortment of services, each of which can be paid for individually. Dropbox, for instance, operates one of the largest global deployments into S3, runs tens of thousands of EC2 instances, and heavily utilizes both the SQS and Route 53 services (Cook, 2014). Dropbox’s features, such as Carousel, Microsoft Office document previews, full-text search, and Mailbox, all rely on AWS “to perform operations for every Dropbox file update in near-realtime” (Cook, 2014).</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;Amazon Simple Storage Service “provides developers and IT teams with secure, durable, highly-scalable object storage. Amazon S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web” (Amazon Web Services, Inc., 2015). Amazon S3 gives the user the option of using it alone, or pairing it with the other AWS services (Amazon Web Services, Inc., 2015).</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;Amazon Elastic Compute Cloud “provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.”  EC2 also “reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as your computing requirements change” (Amazon Web Services, Inc., 2015).</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;Amazon Simple Queue Service “is a fast, reliable, scalable, fully managed message queuing service. SQS makes it simple and cost-effective to decouple the components of a cloud application. You can use SQS to transmit any volume of data, at any level of throughput, without losing messages or requiring other services to be always available” (Amazon Web Services, Inc., 2015).</p>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;Amazon Route 53 is “a highly available and scalable cloud Domain Name System web service” (Amazon Web Services, Inc., 2015). It connects user requests to the other infrastructures running in AWS but can also route to any infrastructure outside of AWS (Amazon Web Services, Inc., 2015).</p>
+    <h3>Python</h3>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;99.9% of the code used for Dropbox is written with Python. Python allows Dropbox to work no matter what file system, OS, or application the user accesses it on. Python was also their best option for quickly working through the error cases they receive on the multiple platforms Dropbox supports (Hoff, 2011).</p>
+	<p>&nbsp; &nbsp; &nbsp; &nbsp;The only real problem that Dropbox encounters with Python is memory usage. Python was using up too much memory, causing Dropbox to have memory optimization issues. The problem was memory fragmentation, which is “what happens when different sized memory blocks are continually being deleted and allocated. Contiguous blocks of memory can no longer be allocated” (Hoff, 2011). As a solution, Dropbox created a custom memory allocator written in C.</p>
+    <h3>SSL</h3>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;Dropbox is engaged in open communication with their users in regards to their privacy and security on their blog. In order to keep the information you send to Dropbox safe and secure, SSL is used for all encryption methods. SSL “keeps people from snooping on your stuff, regardless of what device you’re using to access your files or if you’re on public WiFi” (Akhawe, 2015). In 2014, Dropbox became aware of multiple bugs in SSL. This prompted them to not only make a few patches and change some settings, but to also disable the SSLv3 protocol. These updates allowed Dropbx to become “one of the very few major sites to get an A+ rating from SSL Labs” (Akhawe, 2015).</p>
+    <h3>Links and References</h3>
+    <p>Akhawe, D. (2015). A look behind the scenes at how we kept your data safe in 2014. Dropbox Blog. Retrieved from <a href="https://blogs.dropbox.com/dropbox/2015/01/security-2014/">Dropbox Blog</a></p>
+    <p>Amazon Web Services, Inc.,. (2015). AWS | Amazon Elastic Compute Cloud (EC2) - Scalable Cloud Hosting. Retrieved 23 February 2015, from <a href="http://aws.amazon.com/ec2/">Amazon EC2</a></p>
+    <p>Amazon Web Services, Inc.,. (2015). AWS | Amazon Route 53 - Domain Name Server - DNS Service. Retrieved 23 February 2015, from <a href="http://aws.amazon.com/route53/">Amazon Route 53</a></p>
+    <p>Amazon Web Services, Inc.,. (2015). AWS | Amazon Simple Storage Service (S3) - Online Cloud Storage for Data & Files. Retrieved 23 February 2015, from <a href="http://aws.amazon.com/s3/">Amazon S3</a></p>
+    <p>Amazon Web Services, Inc.,. (2015). AWS | Amazon Simple Queue Service - Hosted Message Queuing Service. Retrieved 23 February 2015, from <a href="http://aws.amazon.com/sqs/">Amazon SQS</a></p>
+    <p>Cook, T. (2014). Dropbox at AWS re:Invent 2014. Dropbox Tech Blog. Retrieved from <a href="https://blogs.dropbox.com/tech/2014/12/aws-reinvent-2014/">Dropbox Tech Blog</a></p>
+    <p>Dropbox,. (2015). Dropbox - About Dropbox. Retrieved 23 February 2015, from <a href="https://www.dropbox.com/about">About Dropbox</a></p>
+    <p>Hoff, T. (2011). 6 Lessons from Dropbox - One Million Files Saved Every 15 minutes - High Scalability -. Highscalability.com. Retrieved 20 February 2015, from <a href="http://highscalability.com/blog/2011/3/14/6-lessons-from-dropbox-one-million-files-saved-every-15-minu.html">High Scalability</a></p>
+  </div>
+  <div class="footer">
+  </div>
+  <!-- end .container --></div>
+</body>
+</html>
